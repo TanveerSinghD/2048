@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2048 Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="headline">
+        <h1>2048</h1>
+        <p class="sub">Use your arrow keys to slide tiles. Merge to reach 2048.</p>
+      </div>
+      <div class="controls">
+        <div class="score-box">
+          <span class="label">Score</span>
+          <span id="score" class="value">0</span>
+        </div>
+        <div class="score-box">
+          <span class="label">Best</span>
+          <span id="best" class="value">0</span>
+        </div>
+        <button id="restart" class="button">New game</button>
+      </div>
+    </header>
+
+    <main class="board-wrapper">
+      <div id="board" class="board">
+        <div id="grid" class="grid"></div>
+        <div id="tiles" class="tiles"></div>
+        <div id="status" class="status hidden"></div>
+      </div>
+    </main>
+
+    <p class="hint">Arrow keys move the board. Press New game to restart.</p>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
