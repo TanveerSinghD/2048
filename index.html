@@ -10,8 +10,13 @@
   <div class="page">
     <header class="hero">
       <div class="headline">
-        <h1>2048</h1>
-        <p class="sub">Use your arrow keys to slide tiles. Merge to reach 2048.</p>
+        <p class="eyebrow">Arcade remix</p>
+        <h1>2048+</h1>
+        <p class="sub">Swipe or use the arrow keys. Special tiles, power-ups, and a touch-friendly board keep runs interesting.</p>
+        <div class="toggles">
+          <button id="theme-toggle" class="ghost">Dark mode</button>
+          <button id="help" class="ghost pill">?</button>
+        </div>
       </div>
       <div class="controls">
         <div class="score-box">
@@ -22,9 +27,53 @@
           <span class="label">Best</span>
           <span id="best" class="value">0</span>
         </div>
+        <div class="score-box">
+          <span class="label">Top tile</span>
+          <span id="top-tile" class="value">0</span>
+        </div>
         <button id="restart" class="button">New game</button>
       </div>
     </header>
+
+    <section class="meta">
+      <div class="panel powerups">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Power-ups</p>
+            <strong>Break stalemates</strong>
+            <p class="micro">Only usable while the board is idle.</p>
+          </div>
+          <div class="badges">
+            <span class="badge" id="state-indicator">Idle</span>
+          </div>
+        </div>
+        <div class="power-grid">
+          <button id="power-wild" class="chip">
+            <span class="chip-label">Drop wild tile</span>
+            <span class="chip-count" id="wild-count">0</span>
+          </button>
+          <button id="power-bomb" class="chip">
+            <span class="chip-label">Bomb blast</span>
+            <span class="chip-count" id="bomb-count">0</span>
+          </button>
+          <button id="power-shuffle" class="chip">
+            <span class="chip-label">Shuffle grid</span>
+            <span class="chip-count" id="shuffle-count">0</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="panel leaderboard">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Local leaderboard</p>
+            <strong>Top 5 runs</strong>
+          </div>
+          <button id="clear-leaderboard" class="ghost">Clear</button>
+        </div>
+        <ol id="leaderboard" class="leaderboard-list"></ol>
+      </div>
+    </section>
 
     <main class="board-wrapper">
       <div id="board" class="board">
@@ -34,7 +83,7 @@
       </div>
     </main>
 
-    <p class="hint">Arrow keys move the board. Press New game to restart.</p>
+    <p class="hint">Arrow keys and swipe gestures move the board. Specials spawn as you reach larger tiles. Power-ups are single-use.</p>
   </div>
 
   <script src="script.js" defer></script>
