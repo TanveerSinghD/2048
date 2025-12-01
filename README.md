@@ -2,6 +2,9 @@
 
 Vanilla HTML/CSS/JS take on 2048 with special tiles, power-ups, easing-driven animations, and a responsive layout that works with both keyboard and touch.
 
+## Game Link
+https://tanveersinghd.github.io/2048/
+
 ## Quick start
 ```sh
 cd /Users/tanveersd/2048
